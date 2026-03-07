@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import stripe
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -136,3 +137,6 @@ REST_FRAMEWORK = {
     ),
 }
 AUTH_USER_MODEL = 'accounts.CustomUser'
+STRIPE_SECRET_KEY = "sk_test_51T8KdDLWlWyhzAvmXND8L28upJeqJm82o69E6Hdc0nediWSt3VdhbMfhSpJk7CUbXpzmXtfkwXq9ayZPEtylwSJD00SPjbcXHT"
+STRIPE_PUBLISHABLE_KEY = "pk_test_51T8KdDLWlWyhzAvmbk98q82HQr25TcVnDYOOSNiXU4UVeqLZfR5iEO9jl9etJZF84Pg1s2UCjrSGbZmF5luGMDpJ00i2L0540R"
+stripe.api_key = STRIPE_SECRET_KEY
